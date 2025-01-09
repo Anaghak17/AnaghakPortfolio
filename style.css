@@ -1,8 +1,14 @@
-body{
-    background-color: #34353a;
+body {
+    background-color: #31333B;
     color: #fff;
     margin: 0;
-    padding: 0 50px;
+    
+}
+.hero,.experience{
+    background: #34353A;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
 }
 ul,li{
     list-style: none;
@@ -23,7 +29,7 @@ img{
     overflow: hidden;
 }
 section {
-    padding: 50px 0;
+    padding: 50px 50px;
 }
 .heroContainer {
     display: flex;
@@ -133,6 +139,8 @@ a.PrimaryButton:hover {
 .ProjectCard {
     position: relative;
     overflow: hidden;
+    padding: 34px;
+    background-color: aliceblue;
     display: none; /* Hide all cards by default */
 }
 .ProjectCard.visible {
@@ -213,4 +221,47 @@ a.PrimaryButton:hover {
     background: #fff;
     color: #000;
     transform: scale(1.2);
+}
+.experienceTitle {
+    top: -30px;
+    position: absolute;
+}
+.year {
+    padding-right: 50px;
+    font-size: 22px;
+    font-weight: 600;
+}
+.experienceWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    position: relative;
+    padding: 50px;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ExperienceBullet {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: 138px;
+    width: 15px;
+    height: 15px;
+    background-color: #FFAA00;
+    border-radius: 50%;
+}
+.year {
+    position: relative;
+}
+
+.year::after {
+    content: ""; /* Required for pseudo-element */
+    position: absolute;
+    top: 20px; /* Creates space at the top of the line */
+    left: 94px; /* Aligns the line with the left edge of the year */
+    height: calc(100% - 20px); /* Adjusts the line height to exclude top space */
+    border: 2px solid #fff; /* The vertical line */
 }

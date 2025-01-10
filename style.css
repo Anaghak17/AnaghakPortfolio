@@ -255,13 +255,34 @@ a.PrimaryButton:hover {
 }
 .year {
     position: relative;
+    display: inline-block;
+    background-color: #5A5A5A;
+    color: white;
+    padding: 5px 10px;
+    height: 22px;
+    border-radius: 3px;
 }
-
+.year::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 93%;
+    transform: translateY(-54%);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #5A5A5A;
+}
 .year::after {
     content: ""; /* Required for pseudo-element */
     position: absolute;
     top: 20px; /* Creates space at the top of the line */
     left: 94px; /* Aligns the line with the left edge of the year */
-    height: calc(100% - 20px); /* Adjusts the line height to exclude top space */
+    height: calc(100% - -88px); /* Adjusts the line height to exclude top space */
     border: 2px solid #fff; /* The vertical line */
+}
+/* contactSection */
+.contactTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

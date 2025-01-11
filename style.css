@@ -280,9 +280,98 @@ a.PrimaryButton:hover {
     height: calc(100% - -88px); /* Adjusts the line height to exclude top space */
     border: 2px solid #fff; /* The vertical line */
 }
+/* education */
+.EducationInfoWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.EducationCard {
+    background: #34353a;
+    min-width: 250px;
+    padding: 40px 30px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 0;
+    flex: 0 0 calc(35% - 12px);
+}
 /* contactSection */
 .contactTitle {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.ContactMe {
+    border-top: 3px solid #d3a83c;
+    border-bottom: 3px solid #d3a83c;
+    background: #2e3037;
+    position: relative;
+}
+.Contactmetitle {
+    text-align: center;
+    position: relative;
+    top: -95px;
+    z-index: 9999;
+    background: #31333b;
+    width: 20%;
+    margin: 0 auto;
+}
+.ContactContentWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.EmailandPhoneWrapper {
+    display: flex;
+    gap: 40px;
+}
+.ContactInfoCard {
+    display: flex;
+    gap: 20px;
+    background: #3D3E42;
+    padding: 10px 35px 10px 10px;
+    border-radius: 8px;
+}
+.SocialMediaIconWrapper {
+    width: 2%;
+}
+.ContactMeContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #f2c268;
+}
+.SocialMediaWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: #31333b;
+    padding: 7px 10px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: -8%;
+    left: 0;
+    right: 0;
+    width: 15%;
+}
+.SocialMediaIconWrapper {
+    width: 80%;
+}
+a.SocialMediaBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footertitle {
+    text-align: center;
+    color: #f2c268;
+    font-weight: 400;
 }

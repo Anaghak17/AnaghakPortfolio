@@ -2,6 +2,7 @@ body {
     background-color: #31333B;
     color: #fff;
     margin: 0;
+    font-family: Helvetica, "Helvetica Neue";
     
 }
 .hero,.experience{
@@ -9,6 +10,21 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
+}
+.hero {
+    background-image: url(images/herobannerimage01.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 90vh;
+    top: 0;
+}
+.heroContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
 }
 ul,li{
     list-style: none;
@@ -30,12 +46,6 @@ img{
 }
 section {
     padding: 50px 50px;
-}
-.heroContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 .bannerTitle {
     font-size: 25px;
@@ -68,9 +78,10 @@ section {
     font-weight: 500;
     border-radius: 8px;
 }
-a.PrimaryButton:hover {
+a.primaryButton:hover {
     background: #f8c76b;
     color: #000;
+    transform: scale(1.2);
 }
 /* aboutSection */
 
@@ -250,8 +261,30 @@ a.PrimaryButton:hover {
     left: 138px;
     width: 15px;
     height: 15px;
-    background-color: #FFAA00;
+    background-color: #f8c76b;
     border-radius: 50%;
+}
+.jobTitle {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.6;
+}
+.experienceMonth {
+    font-size: 16px;
+    line-height: 1.7;
+}
+.joblocation {
+    font-size: 16px;
+    line-height: 1.8;
+}
+.jobDescription {
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 100;
+    text-align: justify;
+    margin-top: 5px;
+    letter-spacing: 0.2px;
 }
 .year {
     position: relative;
@@ -277,7 +310,7 @@ a.PrimaryButton:hover {
     position: absolute;
     top: 20px; /* Creates space at the top of the line */
     left: 94px; /* Aligns the line with the left edge of the year */
-    height: calc(100% - -88px); /* Adjusts the line height to exclude top space */
+    height: calc(100% - -140px); /* Adjusts the line height to exclude top space */
     border: 2px solid #fff; /* The vertical line */
 }
 /* education */
@@ -286,19 +319,47 @@ a.PrimaryButton:hover {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 50px;
+    margin-top: 40px;
 }
 .EducationCard {
     background: #34353a;
-    min-width: 250px;
+    width: 100%;
     padding: 40px 30px;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 0;
-    flex: 0 0 calc(35% - 12px);
+    flex: 0 0 calc(30% - 12px);
+    height: 150px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff;
 }
+.educationIconWrapper {
+    position: absolute;
+    top: 65%;
+    right: 5%;
+}
+
+.Qualification {
+    font-size: 20px;
+    line-height: 2.2;
+    font-weight: 600;
+}
+.AcademicYear {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.Institute {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-top: 5px;
+}
+
 /* contactSection */
 .contactTitle {
     display: flex;
@@ -374,4 +435,41 @@ a.SocialMediaBtn {
     text-align: center;
     color: #f2c268;
     font-weight: 400;
+}
+/*Header styles*/
+#masthead {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    padding: 25px 20px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    position: fixed;
+    background: #31333b;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+ul#primary-menu {
+    display: flex;
+    justify-content: flex-end;
+    text-align: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 70px;
+}
+li.menu-item a {
+    color: #fff;
+    padding: 16px 8px;
+    font-size: 18px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+li.menu-item a:hover {
+    color: #f8c76b;
 }

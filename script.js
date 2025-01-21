@@ -50,3 +50,14 @@ fetch("header.html")
   .then((data) => {
     document.getElementById("header-placeholder").innerHTML = data;
   });
+  
+ // Wait for the DOM to load
+ document.addEventListener("DOMContentLoaded", () => {
+  // Initialize AOS
+  AOS.init({
+    duration: 1000, // Animation duration in milliseconds
+    easing: 'ease-in-out', // Animation easing function
+    once: false, // Whether animation should happen only once
+    mirror: true // Whether elements should animate out while scrolling past them
+  });
+});

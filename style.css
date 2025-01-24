@@ -494,3 +494,178 @@ li.menu-item a {
 li.menu-item a:hover {
     color: #f8c76b;
 }
+/*mobile responsive styles*/
+@media (max-width: 768px) {
+    #masthead {
+      padding: 15px 20px;
+      position: fixed;
+      z-index: 99999999;
+  }
+  
+  .menu-toggle {
+      display: block; /* Show the hamburger menu icon */
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 1000;
+      position: absolute;
+      right: 0;
+      top: 0;
+  }
+  
+  /* Make the navigation take full screen */
+  #site-navigation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #31333b; /* Match your header background color */
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Show the menu when active */
+  #site-navigation.active {
+      transform: translateY(0);
+  }
+  
+  /* Style the menu items */
+  ul#primary-menu {
+      flex-direction: column;
+      gap: 80px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+  }
+  
+  /* Style menu links */
+  li.menu-item a {
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+  }
+  
+  li.menu-item a:hover {
+      color: #f8c76b;
+  }
+  
+    section {
+      padding: 50px 0px;
+  }
+    .HeroContainer {
+      text-align: center;
+      left: 0;
+      right: 0;
+  }
+  .primaryButton {
+    padding: 7px 7px;
+  }
+  .bannerSubtitle {
+    font-size: 15px;
+  }
+  .ButtonContainer {
+      flex-direction: column;
+      gap: 45px;
+  }
+  .line {
+    width: 175px;
+}
+  .sectionContent {
+    font-size: 14px;
+    text-align: left;
+}
+  .sectionTitle {
+      text-align: center;
+      font-size: 40px;
+  }
+  .SkillsSectionContainer {
+      flex-direction: column;
+  }
+  .SkillsBgImgWrapper {
+      width: 22%;
+      bottom: -1%;
+  }
+  .ProjectsContainer {
+      grid-template-columns: 1fr;
+  }
+  .ProjectName {
+      font-size: 14px;
+      line-height: 1.2;
+  }
+  .ProjectDetails {
+      font-size: 12px;
+      width: 100%;
+      line-height: 1.4;
+  }
+  .SeeMoreBtn {
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 12px;
+  }
+  .experienceWrapper {
+    gap: 30px;
+    margin-top: 20px;
+    padding: 0;
+}
+  .jobTitle {
+      font-size: 16px;
+  }
+  .joblocation {
+      font-size: 16px;
+      line-height: 1.8;
+  }
+  .jobDescription {
+    font-size: 12px;
+    text-align: left;
+}
+.year {
+    display: none;
+}
+  .ExperienceBullet {
+     display: none;
+  }
+  .EducationBgImgWrapper {
+      width: 22%;
+  }
+  .EducationInfoWrapper {
+      flex-direction: column;
+  }
+  .EducationCard {
+      width: 80%;
+      padding: 55px 30px;
+  }
+  .Qualification {
+      font-size: 14px;
+  }
+  .Institute {
+      font-size: 12px;
+  }
+  .educationIconWrapper {
+      top: 6%;
+  }
+  .Contactmetitle {
+      top: -90px;
+      width: 75%;
+  }
+  .EmailandPhoneWrapper {
+      flex-direction: column;
+  }
+  .ContactContentWrapper {
+      gap: 40px;
+  }
+  .SocialMediaWrapper {
+      bottom: -5%;
+      width: 50%;
+  }
+  .footertitle {
+      font-size: 30px;
+  }
+  }

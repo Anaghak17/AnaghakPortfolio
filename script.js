@@ -61,3 +61,31 @@ fetch("header.html")
     mirror: true // Whether elements should animate out while scrolling past them
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("mobile-menu-toggle");
+  const navigation = document.getElementById("site-navigation");
+  const menuItems = document.querySelectorAll("#primary-menu .menu-item a");
+
+  // If elements are not found, log an error
+  if (!menuToggle) {
+      console.error("Error: #mobile-menu-toggle not found");
+      return;
+  }
+
+  if (!navigation) {
+      console.error("Error: #site-navigation not found");
+      return;
+  }
+
+  menuToggle.addEventListener("click", () => {
+      navigation.classList.toggle("active");
+  });
+
+  menuItems.forEach(item => {
+      item.addEventListener("click", () => {
+          if (navigation.classList.contains("active")) {
+              navigation.classList.remove("active");
+          }
+      });
+  });
+});

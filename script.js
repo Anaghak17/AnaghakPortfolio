@@ -66,26 +66,33 @@ document.addEventListener("DOMContentLoaded", () => {
   const navigation = document.getElementById("site-navigation");
   const menuItems = document.querySelectorAll("#primary-menu .menu-item a");
 
-  // If elements are not found, log an error
+  // Debugging: Check if elements exist
   if (!menuToggle) {
-      console.error("Error: #mobile-menu-toggle not found");
-      return;
+    console.error("❌ Error: #mobile-menu-toggle not found!");
+    return;
   }
 
   if (!navigation) {
-      console.error("Error: #site-navigation not found");
-      return;
+    console.error("❌ Error: #site-navigation not found!");
+    return;
   }
 
+  // Toggle navigation menu on button click
   menuToggle.addEventListener("click", () => {
-      navigation.classList.toggle("active");
+    navigation.classList.toggle("active");
+
+    // Toggle 'aria-expanded' attribute for accessibility
+    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", !isExpanded);
   });
 
+  // Close menu when clicking a menu item (on mobile)
   menuItems.forEach(item => {
-      item.addEventListener("click", () => {
-          if (navigation.classList.contains("active")) {
-              navigation.classList.remove("active");
-          }
-      });
+    item.addEventListener("click", () => {
+      if (navigation.classList.contains("active")) {
+        navigation.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
   });
 });

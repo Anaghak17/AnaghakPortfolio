@@ -529,7 +529,7 @@ li.menu-item a:hover {
       z-index: 1000;
       position: absolute;
       right: 0;
-      top: 0;
+      top:13px;
   }
   
   /* Make the navigation take full screen */

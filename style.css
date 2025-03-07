@@ -57,6 +57,9 @@ img{
 section {
     padding: 50px 50px;
 }
+.custom-logo {
+    width: 110px;
+}
 .bannerTitle {
     font-size: 25px;
     font-weight: 500;
@@ -481,7 +484,7 @@ a.SocialMediaBtn {
     display: flex;
     justify-content: space-between;
     margin: 15px;
-    padding: 25px 20px;
+    padding: 5px 20px;
     margin: 0 auto;
     left: 0;
     right: 0;
@@ -516,10 +519,13 @@ li.menu-item a:hover {
 /*mobile responsive styles*/
 @media (max-width: 768px) {
     #masthead {
-      padding: 15px 20px;
+      padding: 0;
       position: fixed;
       z-index: 99999999;
   }
+  .custom-logo {
+    width: 95px;
+}
   
   .menu-toggle {
       display: block; /* Show the hamburger menu icon */

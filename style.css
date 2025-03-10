@@ -1,594 +1,575 @@
 body {
-    background-color: #31333B;
-    color: #fff;
-    margin: 0;
-    font-family: Helvetica, "Helvetica Neue";
-    
+  background-color: #31333b;
+  color: #fff;
+  margin: 0;
+  font-family: Helvetica, "Helvetica Neue";
 }
-.hero,.experience{
-    background: #34353A;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    position: relative;
-    z-index: 1;
+.hero,
+.experience {
+  background: #34353a;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
 }
 .hero {
-    background-image: url(images/portfoliobg05.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 90vh;
-    top: 0;
+  background-image: url(images/portfoliobg05.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 90vh;
+  top: 0;
 }
 .hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0.941) 39.6%, rgba(0, 0, 0, 0) 100%);
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    #000000 0%,
+    rgba(0, 0, 0, 0.941) 39.6%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  z-index: 0;
 }
 .heroContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
 }
-ul,li{
-    list-style: none;
+ul,
+li {
+  list-style: none;
 }
-a{
-    color: inherit;
-    text-decoration: none;
-    cursor: pointer;
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
-img{
-    width:100%;
-    height: auto;
+img {
+  width: 100%;
+  height: auto;
 }
 .container {
-    max-width: 1300px;
-    padding: 20px 15px;
-    margin: 0 auto;
-    overflow: hidden;
+  max-width: 1300px;
+  padding: 20px 15px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 section {
-    padding: 50px 50px;
+  padding: 50px 50px;
 }
 .custom-logo {
-    width: 110px;
+  width: 110px;
+}
+/* headerstyles */
+#masthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px;
+  padding: 5px 20px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+  position: fixed;
+  background: #31333b;
+  box-shadow: 0 3px 10px #f8c76b5e;
+}
+
+.site-branding {
+  margin-left: 50px;
+}
+#mobile-menu-toggle {
+  display: none;
+}
+.main-navigation ul {
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 70px;
+}
+.menu-item a {
+  color: #fff;
+  padding: 16px 8px;
+  font-size: 18px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+.menu-item a:hover {
+  color: #f8c76b;
 }
 .bannerTitle {
-    font-size: 25px;
-    font-weight: 500;
-    line-height: 1.6;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1.6;
 }
 .heroName {
-    font-size: 36px;
-    font-weight: 700;
-    color: #f8c76b;
-
+  font-size: 36px;
+  font-weight: 700;
+  color: #f8c76b;
 }
 .bannerSubtitle {
-    font-size: 18px;
-    line-height: 1.6;
-    font-weight: 600;
-    letter-spacing: 2px;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 600;
+  letter-spacing: 2px;
 }
 .site-branding {
-    max-width: 50px;
+  max-width: 50px;
 }
-nav#site-navigation {
+/* nav#site-navigation {
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
-}
+} */
 .buttonContainer {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin: 32px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 32px;
 }
 .primaryButton {
-    border: 3px solid #f8c76b;
-    padding: 10px 18px;
-    color: #f8c76b;
-    font-size: 16px;
-    font-weight: 500;
-    border-radius: 8px;
+  border: 3px solid #f8c76b;
+  padding: 10px 18px;
+  color: #f8c76b;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
 }
 a.primaryButton:hover {
-    background: #f8c76b;
-    color: #000;
-    transform: scale(1.2);
+  background: #f8c76b;
+  color: #000;
+  transform: scale(1.2);
 }
 /* aboutSection */
 
 .sectionTitle {
-    font-size: 48px;
-    font-weight: 700;
+  font-size: 48px;
+  font-weight: 700;
 }
 .line {
-    width: 44px;
-    height: 2px;
-    margin-top: 6px;
-    background-color: #d3a83c;
-    margin-right: 8px;
+  width: 44px;
+  height: 2px;
+  margin-top: 6px;
+  background-color: #d3a83c;
+  margin-right: 8px;
 }
 .aboutContainer {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 15px;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 15px;
 }
 .sectionContent {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.4;
-    text-align: justify;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: justify;
 }
 .Skillstitle {
-    text-align: center;
+  text-align: center;
 }
 .SkillsSectionContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-    margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 30px;
 }
 .SkillCard {
-    background: #3d3e42;
-    padding: 35px 25px;
-    border-radius: 12px;
-    display: flex;
-    flex: 0 1 calc(18% - 2px);
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.3s ease;
+  background: #3d3e42;
+  padding: 35px 25px;
+  border-radius: 12px;
+  display: flex;
+  flex: 0 1 calc(18% - 2px);
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
 }
 .SkillCard:hover {
-    background: #f0bf6c;
-    transform: scale(1.1);
-    color: #000;
+  background: #f0bf6c;
+  transform: scale(1.1);
+  color: #000;
 }
 .SkillImgWrapper {
-    max-width: 50%;
+  max-width: 50%;
 }
 .SkillName {
-    font-size: 16px;
-    font-weight: 700;
-    padding-top: 20px;
-    text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  padding-top: 20px;
+  text-align: center;
 }
 .Skills {
-    position: relative;
+  position: relative;
 }
 .SkillsBgImgWrapper {
-    position: absolute;
-    width: 12%;
-    right: 5%;
-    bottom: -10%;
+  position: absolute;
+  width: 12%;
+  right: 5%;
+  bottom: -10%;
 }
 /* projectsection */
 .ProjectsContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-top: 60px;
 }
 .ProjectCard {
-    position: relative;
-    overflow: hidden;
-    padding: 34px;
-    background-color: aliceblue;
-    display: none; /* Hide all cards by default */
+  position: relative;
+  overflow: hidden;
+  padding: 34px;
+  background-color: aliceblue;
+  display: none; /* Hide all cards by default */
 }
 .ProjectCard.visible {
-    display: block; /* Show only cards with the "visible" class */
+  display: block; /* Show only cards with the "visible" class */
 }
 .ProjectImageWrapper {
-    position: relative;
-    transition: filter 0.3s ease; /* Smooth transition */
+  position: relative;
+  transition: filter 0.3s ease; /* Smooth transition */
 }
 
 .ProjectCard:hover .ProjectImageWrapper {
-    filter: blur(6px); /* Blur effect */
+  filter: blur(6px); /* Blur effect */
 }
 
 .ProjectImage {
-    object-fit: cover;
-    display: block;
+  object-fit: cover;
+  display: block;
 }
 .ProjectInfoWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 20px;
-    width: 90%;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 2; /* Ensure text is above the overlay */
-    transition: opacity 0.3s ease;
-    opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 20px;
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2; /* Ensure text is above the overlay */
+  transition: opacity 0.3s ease;
+  opacity: 0;
 }
 .ProjectCard:hover .ProjectInfoWrapper {
-    opacity: 1; /* Show on hover */
+  opacity: 1; /* Show on hover */
 }
 .ProjectName {
-    font-size: 30px;
-    font-weight: 600;
-    line-height: 1.4;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.4;
 }
 .ProjectDetails {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.4;
-    width: 62%;
-    text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  width: 62%;
+  text-align: center;
 }
 .SeeMoreButtonWrapper {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 .SeeMoreBtn {
-    padding: 10px 15px;
-    background: #f8c76b;
-    border-radius: 8px;
-    color: #000;
-    font-size: 14px;
-    font-weight: 600;
+  padding: 10px 15px;
+  background: #f8c76b;
+  border-radius: 8px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
 }
 .ViewMoreButtonWrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 .ViewMoreProjectsBtn {
-    padding: 15px 25px;
-    background: #f8c76b;
-    border-radius: 10px;
-    color: #000;
-    font-size: 18px;
-    font-weight: 700;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+  padding: 15px 25px;
+  background: #f8c76b;
+  border-radius: 10px;
+  color: #000;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 .ViewMoreProjectsBtn:hover {
-    background: #fff;
-    color: #000;
-    transform: scale(1.2);
+  background: #fff;
+  color: #000;
+  transform: scale(1.2);
 }
 .experienceTitle {
-    top: -30px;
-    position: absolute;
+  top: -30px;
+  position: absolute;
 }
 .year {
-    padding-right: 50px;
-    font-size: 22px;
-    font-weight: 600;
+  padding-right: 50px;
+  font-size: 22px;
+  font-weight: 600;
 }
 .experienceWrapper {
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
-    position: relative;
-    padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  position: relative;
+  padding: 50px;
 }
 .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .ExperienceBullet {
-    content: "";
-    position: absolute;
-    top: 50px;
-    left: 138px;
-    width: 15px;
-    height: 15px;
-    background-color: #f8c76b;
-    border-radius: 50%;
-    box-shadow: 0 0 10px 5px rgba(248, 199, 107, 0.5); 
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 138px;
+  width: 15px;
+  height: 15px;
+  background-color: #f8c76b;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 5px rgba(248, 199, 107, 0.5);
 }
 .jobTitle {
-    font-size: 18px;
-    font-weight: 500;
-    text-transform: uppercase;
-    line-height: 1.6;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 1.6;
 }
 .experienceMonth {
-    font-size: 16px;
-    line-height: 1.7;
+  font-size: 16px;
+  line-height: 1.7;
 }
 .joblocation {
-    font-size: 16px;
-    line-height: 1.8;
+  font-size: 16px;
+  line-height: 1.8;
 }
 .jobDescription {
-    font-size: 14px;
-    line-height: 1.6;
-    font-weight: 100;
-    text-align: justify;
-    margin-top: 5px;
-    letter-spacing: 0.2px;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 100;
+  text-align: justify;
+  margin-top: 5px;
+  letter-spacing: 0.2px;
 }
 .year {
-    position: relative;
-    display: inline-block;
-    background-color: #5A5A5A;
-    color: white;
-    padding: 5px 10px;
-    height: 22px;
-    border-radius: 3px;
+  position: relative;
+  display: inline-block;
+  background-color: #5a5a5a;
+  color: white;
+  padding: 5px 10px;
+  height: 22px;
+  border-radius: 3px;
 }
 .year::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 93%;
-    transform: translateY(-54%);
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid #5A5A5A;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 93%;
+  transform: translateY(-54%);
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid #5a5a5a;
 }
 .year::after {
-    content: ""; /* Required for pseudo-element */
-    position: absolute;
-    top: 20px; /* Creates space at the top of the line */
-    left: 94px; /* Aligns the line with the left edge of the year */
-    height: calc(100% - -140px); /* Adjusts the line height to exclude top space */
-    border: 2px solid #fff; /* The vertical line */
+  content: ""; /* Required for pseudo-element */
+  position: absolute;
+  top: 20px; /* Creates space at the top of the line */
+  left: 94px; /* Aligns the line with the left edge of the year */
+  height: calc(
+    100% - -140px
+  ); /* Adjusts the line height to exclude top space */
+  border: 2px solid #fff; /* The vertical line */
 }
 /* education */
 .EducationInfoWrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 40px;
 }
 .Education {
-    position: relative;
-    margin-top: 60px;
+  position: relative;
+  margin-top: 60px;
 }
 .EducationBgImgWrapper {
-    position: absolute;
-    width: 8%;
-    left: 1%;
-    margin-top: 10px;
+  position: absolute;
+  width: 8%;
+  left: 1%;
+  margin-top: 10px;
 }
 .EducationCard {
-    background: #34353a;
-    width: 100%;
-    padding: 40px 30px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    z-index: 0;
-    flex: 0 0 calc(30% - 12px);
-    height: 150px;
-    overflow: hidden;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    border: 1px solid #fff;
+  background: #34353a;
+  width: 100%;
+  padding: 40px 30px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 0;
+  flex: 0 0 calc(30% - 12px);
+  height: 150px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  border: 1px solid #fff;
 }
 .educationIconWrapper {
-    position: absolute;
-    top: 65%;
-    right: 5%;
+  position: absolute;
+  top: 65%;
+  right: 5%;
 }
 
 .Qualification {
-    font-size: 20px;
-    line-height: 2.2;
-    font-weight: 600;
+  font-size: 20px;
+  line-height: 2.2;
+  font-weight: 600;
 }
 .AcademicYear {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.4;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
 }
 .Institute {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.4;
-    margin-top: 5px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-top: 5px;
 }
 
 /* contactSection */
 .contactTitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .ContactMe {
-    border-top: 3px solid #d3a83c;
-    border-bottom: 3px solid #d3a83c;
-    background: #2e3037;
-    position: relative;
+  border-top: 3px solid #d3a83c;
+  border-bottom: 3px solid #d3a83c;
+  background: #2e3037;
+  position: relative;
 }
 .Contactmetitle {
-    text-align: center;
-    position: relative;
-    top: -95px;
-    z-index: 9999;
-    background: #31333b;
-    width: 20%;
-    margin: 0 auto;
+  text-align: center;
+  position: relative;
+  top: -95px;
+  z-index: 9999;
+  background: #31333b;
+  width: 20%;
+  margin: 0 auto;
 }
 .ContactContentWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 .EmailandPhoneWrapper {
-    display: flex;
-    gap: 40px;
+  display: flex;
+  gap: 40px;
 }
 .ContactInfoCard {
-    display: flex;
-    gap: 20px;
-    background: #3D3E42;
-    padding: 10px 35px 10px 10px;
-    border-radius: 8px;
+  display: flex;
+  gap: 20px;
+  background: #3d3e42;
+  padding: 10px 35px 10px 10px;
+  border-radius: 8px;
 }
 .SocialMediaIconWrapper {
-    width: 2%;
+  width: 2%;
 }
 .ContactMeContent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    color: #f2c268;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #f2c268;
 }
 .SocialMediaWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    background: #31333b;
-    padding: 7px 10px;
-    margin: 0 auto;
-    position: absolute;
-    bottom: -8%;
-    left: 0;
-    right: 0;
-    width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: #31333b;
+  padding: 7px 10px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: -8%;
+  left: 0;
+  right: 0;
+  width: 15%;
 }
 .SocialMediaIconWrapper {
-    width: 80%;
+  width: 80%;
 }
 a.SocialMediaBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footertitle {
-    text-align: center;
-    color: #f2c268;
-    font-weight: 400;
-}
-/*Header styles*/
-#masthead {
-    display: flex;
-    justify-content: space-between;
-    margin: 15px;
-    padding: 5px 20px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    position: fixed;
-    background: #31333b;
-}
-
-.menu-toggle {
-    display: none;
-}
-
-ul#primary-menu {
-    display: flex;
-    justify-content: flex-end;
-    text-align: left;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 70px;
-}
-li.menu-item a {
-    color: #fff;
-    padding: 16px 8px;
-    font-size: 18px;
-    font-weight: 700;
-    transition: color 0.3s ease;
-}
-li.menu-item a:hover {
-    color: #f8c76b;
+  text-align: center;
+  color: #f2c268;
+  font-weight: 400;
 }
 /*mobile responsive styles*/
 @media (max-width: 768px) {
-    #masthead {
-      padding: 0;
-      position: fixed;
-      z-index: 99999999;
+  #mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    position: absolute;
+    right: 5px;
+    top: 30px;
+    color: #d3a83c;
   }
-  .custom-logo {
-    width: 95px;
-}
-  
-  .menu-toggle {
-      display: block; /* Show the hamburger menu icon */
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      z-index: 1000;
-      position: absolute;
-      right: 0;
-      top:13px;
+
+  #masthead {
+    flex-direction: column;
+    padding: 0 20px;
   }
-  
-  /* Make the navigation take full screen */
-  #site-navigation {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #31333b; /* Match your header background color */
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transform: translateY(-100%);
-      transition: transform 0.3s ease-in-out;
+  .site-branding {
+    margin-left: -80%;
   }
-  
-  /* Show the menu when active */
-  #site-navigation.active {
-      transform: translateY(0);
+  .main-navigation ul {
+    display: none;
   }
-  
-  /* Style the menu items */
-  ul#primary-menu {
-      flex-direction: column;
-      gap: 80px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      text-align: center;
+  .main-navigation.toggled ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
   }
-  
-  /* Style menu links */
-  li.menu-item a {
-      font-size: 18px;
-      color: #fff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-  }
-  
   li.menu-item a:hover {
-      color: #f8c76b;
+    color: #f8c76b;
   }
-  
-    section {
-      padding: 50px 0px;
+
+  section {
+    padding: 50px 0;
   }
-    .HeroContainer {
-      text-align: center;
-      left: 0;
-      right: 0;
+  .HeroContainer {
+    text-align: center;
+    left: 0;
+    right: 0;
   }
   .primaryButton {
     padding: 7px 7px;
@@ -597,104 +578,104 @@ li.menu-item a:hover {
     font-size: 15px;
   }
   .ButtonContainer {
-      flex-direction: column;
-      gap: 45px;
+    flex-direction: column;
+    gap: 45px;
   }
   .line {
     width: 175px;
-}
+  }
   .sectionContent {
     font-size: 14px;
     text-align: left;
-}
+  }
   .sectionTitle {
-      text-align: center;
-      font-size: 40px;
+    text-align: center;
+    font-size: 40px;
   }
   .SkillsSectionContainer {
-      flex-direction: column;
+    flex-direction: column;
   }
   .SkillsBgImgWrapper {
-      width: 22%;
-      bottom: -1%;
+    width: 22%;
+    bottom: -1%;
   }
   .ProjectsContainer {
-      grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
   }
   .ProjectName {
-      font-size: 14px;
-      line-height: 1.2;
+    font-size: 14px;
+    line-height: 1.2;
   }
   .ProjectDetails {
-      font-size: 12px;
-      width: 100%;
-      line-height: 1.4;
+    font-size: 12px;
+    width: 100%;
+    line-height: 1.4;
   }
   .SeeMoreBtn {
-      padding: 8px 14px;
-      border-radius: 6px;
-      font-size: 12px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 12px;
   }
   .experienceWrapper {
     gap: 30px;
     margin-top: 20px;
     padding: 0;
-}
+  }
   .jobTitle {
-      font-size: 16px;
+    font-size: 16px;
   }
   .joblocation {
-      font-size: 16px;
-      line-height: 1.8;
+    font-size: 16px;
+    line-height: 1.8;
   }
   .jobDescription {
     font-size: 12px;
     text-align: left;
-}
-.year {
+  }
+  .year {
     display: none;
-}
-.experienceTitle {
+  }
+  .experienceTitle {
     left: 0;
     right: 0;
-}
+  }
   .ExperienceBullet {
-     display: none;
+    display: none;
   }
   .EducationBgImgWrapper {
-      width: 22%;
+    width: 22%;
   }
   .EducationInfoWrapper {
-      flex-direction: column;
+    flex-direction: column;
   }
   .EducationCard {
-      width: 80%;
-      padding: 55px 30px;
+    width: 80%;
+    padding: 55px 30px;
   }
   .Qualification {
-      font-size: 14px;
+    font-size: 14px;
   }
   .Institute {
-      font-size: 12px;
+    font-size: 12px;
   }
   .educationIconWrapper {
-      top: 6%;
+    top: 6%;
   }
   .Contactmetitle {
-      top: -90px;
-      width: 75%;
+    top: -90px;
+    width: 75%;
   }
   .EmailandPhoneWrapper {
-      flex-direction: column;
+    flex-direction: column;
   }
   .ContactContentWrapper {
-      gap: 40px;
+    gap: 40px;
   }
   .SocialMediaWrapper {
-      bottom: -5%;
-      width: 50%;
+    bottom: -5%;
+    width: 50%;
   }
   .footertitle {
-      font-size: 30px;
+    font-size: 30px;
   }
-  }
+}

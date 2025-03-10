@@ -38,18 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 // footer linking
-fetch("footer.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("footer").innerHTML = data;
-  });
 
-// Load the header.html content into the #header-placeholder div
-fetch("header.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("header-placeholder").innerHTML = data;
-  });
   
  // Wait for the DOM to load
  document.addEventListener("DOMContentLoaded", () => {
@@ -61,38 +50,45 @@ fetch("header.html")
     mirror: true // Whether elements should animate out while scrolling past them
   });
 });
-document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.getElementById("mobile-menu-toggle");
-  const navigation = document.getElementById("site-navigation");
-  const menuItems = document.querySelectorAll("#primary-menu .menu-item a");
+// Function to load header and footer and execute a callback after loading
+function loadComponent(file, elementId, callback) {
+  fetch(file)
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById(elementId).innerHTML = data;
+          if (callback) callback(); 
+      })
+      .catch(error => console.error(`Error loading ${file}:`, error));
+}
 
-  // Debugging: Check if elements exist
-  if (!menuToggle) {
-    console.error("❌ Error: #mobile-menu-toggle not found!");
-    return;
-  }
+// Load header and footer when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+  loadComponent("header.html", "header-placeholder", function () {
+      // Now that the header is loaded, we can add event listeners
+      const menuToggle = document.getElementById("mobile-menu-toggle");
+      const navigation = document.getElementById("site-navigation");
+      const menuItems = document.querySelectorAll("#site-navigation a"); // Select menu links
 
-  if (!navigation) {
-    console.error("❌ Error: #site-navigation not found!");
-    return;
-  }
-
-  // Toggle navigation menu on button click
-  menuToggle.addEventListener("click", () => {
-    navigation.classList.toggle("active");
-
-    // Toggle 'aria-expanded' attribute for accessibility
-    const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", !isExpanded);
-  });
-
-  // Close menu when clicking a menu item (on mobile)
-  menuItems.forEach(item => {
-    item.addEventListener("click", () => {
-      if (navigation.classList.contains("active")) {
-        navigation.classList.remove("active");
-        menuToggle.setAttribute("aria-expanded", "false");
+      if (!menuToggle || !navigation) {
+          console.error("Menu toggle button or navigation not found!");
+          return;
       }
-    });
+
+      // Toggle menu on hamburger click
+      menuToggle.addEventListener("click", function () {
+          navigation.classList.toggle("toggled");
+          const isExpanded = navigation.classList.contains("toggled");
+          menuToggle.setAttribute("aria-expanded", isExpanded);
+      });
+
+      // Close menu when clicking a menu item
+      menuItems.forEach(item => {
+          item.addEventListener("click", function () {
+              navigation.classList.remove("toggled"); // Hide the menu
+              menuToggle.setAttribute("aria-expanded", "false");
+          });
+      });
   });
+
+  loadComponent("footer.html", "footer");
 });

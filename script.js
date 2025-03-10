@@ -68,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const menuToggle = document.getElementById("mobile-menu-toggle");
       const navigation = document.getElementById("site-navigation");
       const menuItems = document.querySelectorAll("#site-navigation a"); // Select menu links
+      const header = document.getElementById("masthead"); // Ensure header is selected after loading
 
       if (!menuToggle || !navigation) {
           console.error("Menu toggle button or navigation not found!");
@@ -88,6 +89,19 @@ document.addEventListener("DOMContentLoaded", function () {
               menuToggle.setAttribute("aria-expanded", "false");
           });
       });
+
+      // Scroll event listener (now inside the header load callback)
+      if (header) {
+          window.addEventListener("scroll", function () {
+              if (window.scrollY > 50) {
+                  header.classList.add("scrolled");
+              } else {
+                  header.classList.remove("scrolled");
+              }
+          });
+      } else {
+          console.error("Header element not found after loading!");
+      }
   });
 
   loadComponent("footer.html", "footer");

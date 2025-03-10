@@ -536,13 +536,16 @@ a.SocialMediaBtn {
     font-size: 24px;
     position: absolute;
     right: 5px;
-    top: 30px;
+    top: 23px;
     color: #d3a83c;
   }
+  .custom-logo {
+    width: 85px;
+}
 
   #masthead {
     flex-direction: column;
-    padding: 0 20px;
+    padding: 0 20px 0 0;
   }
   .site-branding {
     margin-left: -80%;

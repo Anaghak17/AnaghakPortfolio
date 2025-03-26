@@ -169,9 +169,12 @@ a.primaryButton:hover {
 }
 .aboutContainer {
   display: flex;
-  align-items: flex-start;
+  gap: 60px;
   margin-top: 15px;
 }
+.aboutSectionImage {
+  width: 65%;
+} 
 .sectionContent {
   font-size: 16px;
   font-weight: 400;
@@ -530,6 +533,17 @@ a.SocialMediaBtn {
   color: #f2c268;
   font-weight: 400;
 }
+.siteInfo {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  gap: 10px;
+  letter-spacing: 1px;
+}
+.copyRight::after {
+  content: "|";
+  margin-left: 2px;
+}
 /*mobile responsive styles*/
 @media (max-width: 768px) {
   #mobile-menu-toggle {
@@ -590,9 +604,7 @@ a.SocialMediaBtn {
     flex-direction: column;
     gap: 45px;
   }
-  .line {
-    width: 175px;
-  }
+  
   .sectionContent {
     font-size: 14px;
     text-align: left;
@@ -601,6 +613,14 @@ a.SocialMediaBtn {
     text-align: center;
     font-size: 40px;
   }
+  .aboutContainer {
+    flex-direction: column;
+    gap: 20px;
+}
+.aboutSectionImage {
+    width: 80%;
+    margin: 0 auto;
+}
   .SkillsSectionContainer {
     flex-direction: column;
   }
@@ -687,4 +707,13 @@ a.SocialMediaBtn {
   .footertitle {
     font-size: 30px;
   }
+  .siteInfo {
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    font-size: 12px;
+}
+.copyRight::after {
+    display: none;
+}
 }

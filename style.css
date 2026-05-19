@@ -169,12 +169,11 @@ a.primaryButton:hover {
 }
 .aboutContainer {
   display: flex;
-  gap: 60px;
   margin-top: 15px;
 }
-.aboutSectionImage {
-  width: 65%;
-} 
+img.aboutImage {
+    width: 80%;
+}
 .sectionContent {
   font-size: 16px;
   font-weight: 400;
